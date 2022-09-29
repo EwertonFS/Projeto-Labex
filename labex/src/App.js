@@ -25,6 +25,7 @@ function App() {
   return (
     <AppContainer>
       <CssBaseline>
+      
     <Routes>
     <Route path='/' element={<Home />}></Route>
     <Route path='/inscricao' element={<SignUp />}></Route>

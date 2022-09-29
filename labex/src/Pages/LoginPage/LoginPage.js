@@ -2,15 +2,16 @@ import { Button, TextField, Typography } from "@mui/material";
 import axios from "axios";
 import { useForm } from "../../hook/useForm";
 import { LoginForm } from "./styled";
-import verificationLogin from "../../routes/coordination"
 
+import { useNavigate } from "react-router-dom";
 
 
 
 
 const LoginPage = () => {
+  //ultilizando o V.6 navigate para redirecionar a página após 
+  let navigate = useNavigate();
    
-   //ultilizando o V.6 navigate para redirecionar a página
    
    //aqui usando o hook do formulário
   const [form, onChangeInput] = useForm({
@@ -32,7 +33,8 @@ const LoginPage = () => {
       window.localStorage.setItem('token', response.data.token)
       //verificar se for guardado  f12/application/localstrogage/localhost
      // direcionando o navegador
-     verificationLogin('/administrator')
+   
+     navigate('/administrador')
     })
   };
 
@@ -59,7 +61,7 @@ const LoginPage = () => {
           name={"password"}
         />
         {/* <Link to={'/Administrador'}> */}
-        <Button variant={"contained"} color={"primary"} type={"submit"}>
+        <Button variant={"contained"} color={"primary"} type={"submit"} >
           {" "}
           Entrar
         </Button>

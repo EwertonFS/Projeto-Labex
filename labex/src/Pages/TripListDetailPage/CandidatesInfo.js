@@ -7,8 +7,9 @@ import List from '@mui/material/List';
 
 
 
-const CandidatesInfo = () => {
-    return (
+const CandidatesInfo = (props) => {
+   
+  return (
       <div>
          <Card sx={{ minWidth: 275 }} >
       <CardContent>
@@ -17,8 +18,13 @@ const CandidatesInfo = () => {
         </Typography>
         <Typography sx={{ mb: 1.0 }} >
         <List>
-        <CandidatesItem></CandidatesItem>
-        <CandidatesItem></CandidatesItem>
+          {/* ultilizando o map para renderinizar as listas mais uma vez */}
+          {props.candidates.map(candidate =>{
+            return <CandidatesItem candidate={candidate}/>
+          })}
+       
+       {/* <CandidatesItem /> */}
+
         </List>
         </Typography>
       </CardContent>

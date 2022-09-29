@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import { FormContainer } from "../../components/FormContainer/FormContainer";
 
 const CreatedTripsListPage = () => {
+  
+  
+  
   return (
     <>
       <PageTitle infoName={"Criar Viagem"} />

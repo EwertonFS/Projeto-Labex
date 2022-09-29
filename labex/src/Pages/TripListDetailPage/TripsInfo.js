@@ -6,8 +6,13 @@ import TripInfoItem from './TripInfoItem';
 
 
 
-const TripsInfo = () => {
-    return (
+const TripsInfo = (props) => {
+    //faremos uma desustruturação, fica menos verboso
+    const {name, planet, description,date,durationInDays}=props.info
+  
+  
+  
+  return (
       <div>
           <Card sx={{ minWidth: 275 }}>
       <CardContent>
@@ -15,11 +20,11 @@ const TripsInfo = () => {
          Informações da Viagem
         </Typography>
         <Typography sx={{ mb: 1.5 }} >
-        <TripInfoItem infoName={"name"} info={"Viagem para marte"}/>
-        <TripInfoItem infoName={"Planeta"} info={"Marte"}/>
-        <TripInfoItem infoName={"Data"} info={"01/07/2020"}/>
-        <TripInfoItem infoName={"Descrição"} info={"Viagem maneira para colonizar marte"}/>
-        <TripInfoItem infoName={"Duração em Dias"} info={"228"}/>
+        <TripInfoItem infoName={"name"} info={name}/>
+        <TripInfoItem infoName={"Planeta"} info={planet}/>
+        <TripInfoItem infoName={"Data"} info={date}/>
+        <TripInfoItem infoName={"Descrição"} info={description}/>
+        <TripInfoItem infoName={"Duração em Dias"} info={durationInDays}/>
         </Typography>
       </CardContent>
       

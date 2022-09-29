@@ -1,4 +1,7 @@
 //usa os hooks do react e retorna oque os componentes forem usar
+// o hooke aproveita logica de estados e de life cicle
+
+
 
 import { useState } from "react"
 

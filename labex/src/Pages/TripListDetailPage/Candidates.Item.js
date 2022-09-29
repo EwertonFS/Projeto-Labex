@@ -6,7 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownAltIcon from "@mui/icons-material/ThumbDownAlt";
 
-const CandidatesItem = () => {
+const CandidatesItem = (props) => {
   return (
     <div>
       <List dense={false}>
@@ -17,7 +17,7 @@ const CandidatesItem = () => {
             </IconButton>
           }
           >
-          <ListItemText primary="Candidato 1" />
+          <ListItemText primary={props.candidate} />
 
           <IconButton>
             <ThumbUpIcon />
