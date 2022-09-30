@@ -6,21 +6,35 @@ import IconButton from "@mui/material/IconButton";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownAltIcon from "@mui/icons-material/ThumbDownAlt";
 
+
+
+
 const CandidatesItem = (props) => {
+
+
+  const  approveCandidate = () => {
+      props.decideCandidate(true, props.candidate.id)
+  }
+
+  const  rejectCandidate = () => {
+   props.decideCandidate(false, props.candidate.id)
+}
+
+
   return (
     <div>
       <List dense={false}>
         <ListItem
           secondaryAction={
               <IconButton>
-              <ThumbDownAltIcon />
+              <ThumbDownAltIcon onClick ={ rejectCandidate}/>
             </IconButton>
           }
           >
-          <ListItemText primary={props.candidate} />
+          <ListItemText primary={props.candidate.name} />
 
           <IconButton>
-            <ThumbUpIcon />
+            <ThumbUpIcon   onClick={approveCandidate}/>
           </IconButton>
         </ListItem>
       </List>

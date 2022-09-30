@@ -1,2 +1,0 @@
-# Projeto-Labex
-Projeto-Labex

@@ -10,6 +10,7 @@ import styled from "styled-components"
 import { CssBaseline } from "@mui/material";
 
 
+
 const AppContainer = styled.div`
 display: flex;
 flex-direction: column;
@@ -19,12 +20,13 @@ padding:16px;
   
 
 
-
   
 function App() {
   return (
     <AppContainer>
+       
       <CssBaseline>
+      
       
     <Routes>
     <Route path='/' element={<Home />}></Route>
@@ -32,11 +34,12 @@ function App() {
     <Route path='/login' element={<LoginPage />}></Route>
     <Route path='/Administrador' element={<AdminHomePage/>}></Route>
     <Route path='/Administrador/viagensCriadas' element={<CreatedTripsListPage />}></Route>
-    <Route path='/Administrador/detalhesViagens' element={<TripListDetailPage />}></Route>
-    
+    <Route path='/Administrador/detalhesViagens/:tripId' element={<TripListDetailPage />}></Route>
     </Routes>
     
+    
     </CssBaseline>
+    
     </AppContainer>
   )
 

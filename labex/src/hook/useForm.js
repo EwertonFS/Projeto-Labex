@@ -12,8 +12,16 @@ export const useForm = (initialState) => {
       const newValue = event.target.value
       const fieldName = event.target.name
     
+      //ou podia desestruturar mas nao funcionou nao sei pq
+      // const {newValue,fieldName}=event.target
+
+      
       setForm({...form, [fieldName]: newValue})
     }
+      // const cleanFields = () => {
+      //   setForm(initialState)
+      // }
 
-    return [form , onChangeInput]
+
+    return [form , onChangeInput ]
 }

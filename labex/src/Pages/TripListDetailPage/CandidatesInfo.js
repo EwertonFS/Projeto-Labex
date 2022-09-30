@@ -19,10 +19,10 @@ const CandidatesInfo = (props) => {
         <Typography sx={{ mb: 1.0 }} >
         <List>
           {/* ultilizando o map para renderinizar as listas mais uma vez */}
-          {props.candidates.map(candidate =>{
-            return <CandidatesItem candidate={candidate}/>
+          {props.list.map(candidates =>{
+            return <CandidatesItem key = {"candidates"} candidate ={candidates}  decideCandidate={props.decideCandidate}/>
           })}
-       
+
        {/* <CandidatesItem /> */}
 
         </List>

@@ -7,13 +7,14 @@
 // import TripListDetailPage from "./Pages/TripListDetailPage/TripListDetailPage";
 // import CreatedTripsListPage from "./Pages/CreatedTripsListPage/CreatedTripsListPage";
 
-// const Rotas = () => {
+// export const RotasApp = () => {
 //     <Routes>
 //     <Route path='/' element={<Home />}></Route>
-//     <Route path='/login' element={<LoginPage />}></Route>
 //     <Route path='/inscricao' element={<SignUp />}></Route>
+//     <Route path='/login' element={<LoginPage />}></Route>
 //     <Route path='/Administrador' element={<AdminHomePage/>}></Route>
 //     <Route path='/Administrador/viagensCriadas' element={<CreatedTripsListPage />}></Route>
-//     <Route path='/Administrador/detalhesViagens' element={<TripListDetailPage />}></Route>
+//     <Route path='/Administrador/detalhesViagens/:tripId' element={<TripListDetailPage />}></Route>
+    
 //     </Routes>
 // }
